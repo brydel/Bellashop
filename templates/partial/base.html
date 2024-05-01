@@ -1,0 +1,248 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}bellaShop{% endblock title %}</title>
+  {% block extra_css %}
+  <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ {% endblock extra_css %}
+
+</head>
+<body>
+  {% block header %}
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <!-- Logo plus grand et centré -->
+        <a class="navbar-brand mx-auto mx-lg-0" href="#">
+          <img src="{% static 'chemin_vers_votre_logo.png' %}" alt="Logo Bella Shop" width="120" class="d-inline-block align-text-top">
+        </a>
+        
+        <!-- Bouton pour le menu en mode mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Contenu du menu -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Barre de recherche placée de manière plus naturelle -->
+          <form class="d-flex my-2 my-lg-0">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Chercher</button>
+          </form>
+    
+          <!-- Liens de navigation avec un espacement et un style améliorés -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Accueil</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'accueil:customerregistration' %}">S'enregistrer</a>
+            </li>
+            <!-- Autres liens ici -->
+          </ul>
+    
+          <!-- Icônes et liens de profil, liste de souhaits et panier -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liste de souhaits
+                <i class="fa-solid fa-heart"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Panier
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+              
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'accueil:connexion' %}">Connexion</a>
+              <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSecondaryDropdown" aria-controls="navbarSecondaryDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSecondaryDropdown">
+              <ul class="navbar-nav">
+                  <!-- Dropdown pour les catégories si nécessaire -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSecondaryMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Explorer les Catégorie
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownSecondaryMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'accueil:category' 'GC' %}">Games De Chere</a></li>
+                        <li><a class="dropdown-item" href="{% url 'accueil:category' 'PI' %}">Produit vendu individuellement</a></li>
+                        <li><a class="dropdown-item" href="{% url 'accueil:category' 'Populaire' %}">Produit Populaire</a></li>
+                        <li><a class="dropdown-item" href="{% url 'accueil:category' 'autres' %}">Autres</a></li>
+
+                        
+                          <!-- Ajouter d'autres catégories ici -->
+                      </ul>
+                  </li>
+                  <!-- Autres éléments de navigation -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Nouveautés</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Offres Spéciales</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Meilleures Ventes</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Centre de Support 24/7</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+   </header>
+  
+  {% endblock header %}
+
+
+ 
+    <!-- Fin header -->
+   
+    {% block content %}
+
+    {% endblock content%}  
+    
+
+    {% block footer %}
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Bouton pour dérouler le contenu du footer -->
+      <div class="text-center">
+        <a href="#footerContent" class="footer-toggler" data-bs-toggle="collapse" aria-expanded="false" aria-controls="footerContent">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+      </div>
+    
+      <!-- Contenu déroulant du footer -->
+      <div class="collapse" id="footerContent">
+        <div class="container">
+          <!-- Section: Social media -->
+          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+              <span>Rejoignez-nous sur les réseaux sociaux :</span>
+            </div>
+            <!-- Right -->
+            <div>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <!-- Ajouter d'autres icônes de réseaux sociaux ici -->
+            </div>
+          </section>
+    
+          <!-- Section: Links -->
+          <div class="row justify-content-between">
+            <div class="col-4 effet1 ">
+              <div class="container my-5">
+                <!-- Section d'avertissement personnalisée -->
+                <div class="alert alert-custom" role="alert">
+                  <h4>ACHETER MAINTENANT</h4>
+                  <p>AVERTISSEMENT: Les quantités sont ultra limitées ! Notre sérum capillaire 15-en-1, fait à la main, renferme 15 ingrédients rares, dont le précieux Chebe. Il est méticuleusement macéré à froid pendant 4 semaines.
+                    Nous disposons d'un nombre extrêmement restreint de bouteilles prêtes à l'emploi qui viennent de terminer cette longue macération. En raison de la rareté des ingrédients, certains peuvent rapidement être en rupture de stock. Le
+                    15-en-1 s'écoule rapidement. Ne manque pas cette occasion unique d'obtenir ce mélange puissant qui stimule la pousse, réduit la perte de cheveux, et permet de constater de nouvelles pousses après seulement 14 jours !
+                  </p>
+                </div>
+              </div>
+            
+    
+            </div>
+            <div class="col-4">
+              <div class="container my-5">
+                <h2>FAQ</h2>
+                <!-- Accordion début -->
+                <div class="accordion" id="accordionFAQ">
+                  <!-- Item 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Est-ce que je vais avoir des résultats ?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                        <strong>Ceci est la réponse à la première question.</strong> Voici plus d'informations sur ce que vous pouvez attendre en termes de résultats...
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Est-ce que le sérum convient à mon type de cheveux ?
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                        <strong>Ceci est la réponse à la deuxième question.</strong> Ce sérum est adapté pour différents types de cheveux, y compris...
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Quand vais-je recevoir ma commande ?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                      <div class="accordion-body">
+                        <strong>Ceci est la réponse à la troisième question.</strong> Les commandes sont généralement traitées dans un délai de...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion fin -->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    
+      <!-- Section: Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Bella Shop - Tout droit réservé.
+      </div>
+    </footer>
+    {% endblock footer %}
+   
+    {% block extra_js %}
+    <script src="{% static 'assets/javascript/index.js' %}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b0534ecca6.js" crossorigin="anonymous" defer></script>
+    {% endblock extra_js %}
+  </body>
+  </html>

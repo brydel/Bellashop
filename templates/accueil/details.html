@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <script src="{% static 'assets/javascript/index.js' %}"> </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'path_to_your_logo.png' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                YourLogo
+            </a>
+            <form class="d-flex align-items-center ms-6 me-auto" style="width: 600px;">
+                <input class="form-control form-control-lg" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Wishlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light " >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Browse All Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <!-- Dropdown items for categories -->
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link dropdown-toggle" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mega menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">contact</a>
+          </li>
+          <!-- More nav items -->
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="#">24/7 Support Center</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4">
+    <div class="row">
+        <!-- Section Profil Utilisateur -->
+        <div class="col-md-4">
+            <div class="profile-info mb-3">
+                <h2>John Doe</h2>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Member since:</strong> January 2022</p>
+                <!-- Ajoutez d'autres informations de profil si nécessaire -->
+            </div>
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">Profile</a>
+              <a class="nav-link" id="v-pills-orders-tab" data-bs-toggle="pill" href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">Orders</a>
+              <a class="nav-link" id="v-pills-addresses-tab" data-bs-toggle="pill" href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses" aria-selected="false">Addresses</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Account Settings</a>
+          </div>
+      </div>
+        <!-- Section Détails du Profil -->
+        <div class="col-md-8">
+          <div class="profile-info mb-3">
+              <h3>Profile Details</h3>
+              <!-- Contenu détaillé du profil ici -->
+          </div>
+        <div class="col-md-8">
+          <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <!-- Contenu du profil ici -->
+              </div>
+              <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                  <!-- Contenu des commandes ici -->
+                  <p> brydel</p>
+              </div>
+              <div class="tab-pane fade" id="v-pills-addresses" role="tabpanel" aria-labelledby="v-pills-addresses-tab">
+                  <!-- Contenu des adresses ici -->
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  <!-- Paramètres du compte ici -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

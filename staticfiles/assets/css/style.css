@@ -1,0 +1,312 @@
+body{
+    background-color: #f7f7f7;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.product-price {
+    font-size: 1.5em;
+    color: green;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+.vendor-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.vendor-info h5 {
+    margin-top: 0;
+}
+
+.thumbnail {
+    cursor: pointer;
+    border-radius: 10%;
+}
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    border: 2px solid transparent;
+}
+.thumbnail img:hover, .thumbnail img.active {
+    border-color: #007bff;
+}
+.img-fluid{
+    border-radius: 10%;
+}
+.profile-info {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+.carousel {
+    border-radius: 15px; /* Bord arrondi */
+    overflow: hidden;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+  
+  .carousel-item {
+    height: 500px; /* ou la hauteur que tu souhaites */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%; /* modifié de 'auto' à '100%' */
+    object-fit: cover; /* pour couvrir l'espace sans déformation */
+  }
+  .payment-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+}
+.payment-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.payment-body {
+    padding-bottom: 20px;
+}
+.payment-footer {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+.btn-pay {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.registration-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+.form-control {
+    border-radius: 5px;
+}
+.btn-custom {
+    background-color: #004085;
+    border-color: #004085;
+    color: white;
+}
+.password-reset-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+.btn-custom {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: white;
+}
+.reset-password-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+.btn-custom {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: white;
+}
+.addresses-container {
+    margin-top: 20px;
+}
+.address {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.btn-custom {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: white;
+}
+.imacarousel{
+    height: 50px;
+}
+.card-img-top {
+    height: 300px; 
+    object-fit: cover; /* Cela coupera l'image si nécessaire pour s'adapter à la hauteur tout en préservant l'aspect ratio */
+  }
+
+ /* Couleur principale pour la première barre de navigation */
+.navbar.bg-primary {
+    background-color: #2d472c; /* Un vert foncé qui se marie bien avec le reste de la page */
+  }
+  
+  /* Couleur de fond pour la seconde barre de navigation */
+  .navbar.bg-secondary {
+    background-color: #356859; /* Un vert plus profond pour distinguer des sections différentes */
+  }
+  
+  /* Styliser les liens de la navigation principale */
+  .navbar.bg-primary .navbar-nav .nav-link {
+    color: #f8f8f2;
+  }
+  
+  .navbar.bg-primary .navbar-nav .nav-link:hover,
+  .navbar.bg-primary .navbar-nav .nav-link:focus {
+    color: #c9d1d9;
+  }
+  
+  /* Styliser les liens de la navigation secondaire */
+  .navbar.bg-secondary .navbar-nav .nav-link {
+    color: #f8f8f2;
+  }
+  
+  .navbar.bg-secondary .navbar-nav .nav-link:hover,
+  .navbar.bg-secondary .navbar-nav .nav-link:focus {
+    color: #c9d1d9;
+  }
+  
+  /* Personnaliser le bouton de recherche */
+  .navbar.bg-primary .btn-outline-light {
+    border-color: #f8f8f2;
+    color: #f8f8f2;
+  }
+  
+  .navbar.bg-primary .btn-outline-light:hover {
+    background-color: #f8f8f2;
+    color: #2d472c;
+  }
+  
+  /* Personnaliser le bouton menu (hamburger) pour les deux barres de navigation */
+  .navbar-dark .navbar-toggler {
+    border-color: #f8f8f2;
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    /* Ici, tu peux personnaliser l'icône si nécessaire */
+  }
+  .fab{
+   width: 50px;
+   margin-right: 5px;
+  }
+  .fab:hover{
+    color: #007bff;
+  }
+  .footer-toggler {
+  font-size: 24px; /* Taille de la flèche */
+  padding: 10px; /* Espacement autour de la flèche */
+  cursor: pointer; /* Change le curseur en un pointeur pour indiquer que c'est cliquable */
+  transition: transform 0.3s; /* Animation fluide pour le retournement de la flèche */
+}
+
+.footer-toggler.collapsed {
+  transform: rotate(180deg); /* Retourne la flèche quand le contenu est fermé */
+}
+#acheter{
+    border: 1px solid green;
+
+    text-align: center;
+    padding: 10px;
+    border-radius: 5%;
+    margin-top: 10px;
+    background-color: red;
+    color: black;
+}
+
+.alert-custom {
+    background-color: #FF0000; /* Rouge pour l'arrière-plan */
+    color: #FFFFFF; /* Texte en blanc */
+    padding: 1rem; /* Espacement interne */
+    border-radius: 0.25rem; /* Arrondir les coins */
+    margin-bottom: 1rem; /* Espacement en dessous de l'alerte */
+    font-size: 1rem; /* Taille de la police */
+  }
+  
+  .alert-custom h4 {
+    margin-top: 0; /* Enlève la marge au-dessus du titre */
+    font-size: 1.5rem; /* Taille de la police pour le titre */
+    font-weight: bold; /* Gras pour le titre */
+  }
+  .category-header {
+    background-color: #004a7c; /* Couleur de l'arrière-plan de l'en-tête */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .product-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border-radius: 10px; /* Arrondit les coins de la carte */
+  }
+
+  .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-image img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%; /* Assure que l'image couvre toute la largeur de la carte */
+    height: auto; /* Maintient l'aspect ratio de l'image */
+  }
+
+  .product-info {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .product-price {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .btn-add-to-cart {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+
+  .btn-add-to-cart:hover {
+    background-color: #0056b3;
+  }
+  .cate{
+   
+  }
+  main {
+    min-height: calc(100vh - 100px); /* Ajustez 100px pour prendre en compte l'en-tête et le pied de page */
+  }
+  footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
